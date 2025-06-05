@@ -1,4 +1,5 @@
 // @ts-ignore
+import { getScriptDataAttribute } from "@/utils/getScriptDataAttribute";
 import { openMenu } from "../menu/menu";
 import translateWidget from "../menu/translateWidget";
 import css from "./widget.css";
@@ -26,7 +27,13 @@ export function renderWidget() {
 
   translateWidget();
 
-  document.body.appendChild($widget);
+  const parent = getScriptDataAttribute("parent");
+
+  if (parent) {
+    document.querySelector(parent)?.appendChild($widget);
+  } else {
+    document.body.appendChild($widget);
+  }
 
   return $widget;
 }

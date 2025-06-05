@@ -13,7 +13,6 @@ function initialize() {
       offset: getScriptDataAttribute("offset")?.split(",").map(Number),
       size: getScriptDataAttribute("size"),
     };
-    console.log("options", options);
 
     window.SiennaPlugin = sienna({
       options,
