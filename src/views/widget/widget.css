@@ -20,15 +20,15 @@
   bottom: 30px; */
   box-shadow: 0 5px 15px 0 rgb(37 44 97 / 15%), 0 2px 4px 0 rgb(93 100 148 / 20%);
   transition: transform 0.2s ease;
+
   border-radius: 50%;
   align-items: center;
   justify-content: center;
   width: 58px;
   height: 58px;
-  display: flex;
   cursor: pointer;
   border: 3px solid white !important;
-  outline: 5px solid #0048ff !important;
+  outline: 5px solid #2f72bf !important;
   text-decoration: none !important;
   background: rgb(50, 108, 255) !important;
   background: linear-gradient(96deg, rgba(50, 108, 255, 1) 0%, rgba(0, 72, 255, 1) 100%) !important;

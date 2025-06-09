@@ -3,24 +3,24 @@ import { getStorageData, saveStorageData } from "@/storage";
 export let userSettings = {
   lang: undefined,
   position: undefined,
-  states: {}
+  states: {},
 };
 
 export const STORAGE_KEY = "asw-user-settings";
 
 export function setUserStateSettings(state) {
-    userSettings.states = {
-        ...userSettings.states,
-        ...state
-    }
+  userSettings.states = {
+    ...userSettings.states,
+    ...state,
+  };
 
-    saveUserSettings();
+  // saveUserSettings();
 }
 
 export function saveUserSettings() {
-    saveStorageData(STORAGE_KEY, userSettings);
+  saveStorageData(STORAGE_KEY, userSettings);
 }
 
 export function getSavedUserSettings() {
-    return getStorageData(STORAGE_KEY);
+  return getStorageData(STORAGE_KEY);
 }

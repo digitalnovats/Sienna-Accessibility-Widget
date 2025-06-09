@@ -1,4 +1,4 @@
-import { saveUserSettings, userSettings } from "@/globals/userSettings";
+import { userSettings } from "@/globals/userSettings";
 import { $menu } from "@/views/menu/menu";
 import translateWidget from "@/views/menu/translateWidget";
 import { LANGUAGES } from "./Languages";
@@ -19,6 +19,6 @@ export function changeLanguage(newLang) {
     }
 
     translateWidget();
-    saveUserSettings();
+    // saveUserSettings();
   }
 }

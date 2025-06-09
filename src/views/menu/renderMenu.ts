@@ -13,7 +13,7 @@ import reset from "./reset";
 import { ILanguage, LANGUAGES } from "../../i18n/Languages";
 
 import { pluginConfig } from "@/globals/pluginConfig";
-import { saveUserSettings, userSettings } from "@/globals/userSettings";
+import { userSettings } from "@/globals/userSettings";
 import { changeLanguage } from "@/i18n/changeLanguage";
 import enableContrast from "@/tools/enableContrast";
 import { $widget } from "../widget/widget";
@@ -22,6 +22,7 @@ import toggleMenu from "./toggleMenu";
 
 export default function renderMenu() {
   const $container: HTMLElement = document.createElement("div");
+  $container.style.display = "block";
   $container.innerHTML = `<style>${css}</style>` + template;
 
   const $menu = $container.querySelector(".asw-menu");
@@ -97,7 +98,7 @@ export default function renderMenu() {
       adjustFontSize(fontSize);
       userSettings.states.fontSize = fontSize;
 
-      saveUserSettings();
+      // saveUserSettings();
     });
   });
 
@@ -124,7 +125,7 @@ export default function renderMenu() {
       userSettings.states[key] = isSelected;
       renderTools();
 
-      saveUserSettings();
+      // saveUserSettings();
     });
   });
 
